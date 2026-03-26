@@ -3,7 +3,7 @@ import { deleteRecipe } from "../services/api";
 
 function RecipeCard({ recipe, onDelete, showEditDelete = false }) {
   const summary = recipe.ingredients || recipe.Steps || "No description available.";
-  const imageUrl = recipe.image_upload;
+
 
   const currentUser = localStorage.getItem("userEmail") || "";
   const isOwner =
@@ -27,7 +27,7 @@ function RecipeCard({ recipe, onDelete, showEditDelete = false }) {
 
   return (
     <div className="recipe-card">
-      <img src={imageUrl} alt={recipe.title} className="recipe-card__image" />
+      <img src={recipe.image_upload} alt={recipe.title} className="recipe-card__image" />
 
       <div className="recipe-card__body">
         <h3 className="recipe-card__title">{recipe.title}</h3>

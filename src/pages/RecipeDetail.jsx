@@ -65,9 +65,7 @@ function RecipeDetail() {
     );
   }
 
-  const imageUrl = recipe.image_upload
-    ? `http://127.0.0.1:8000/${recipe.image_upload.toString().replace(/^\//, "")}`
-    : "https://via.placeholder.com/800x450?text=No+Image";
+  
 
   return (
     <div className="container mt-5">
@@ -83,7 +81,7 @@ function RecipeDetail() {
 
         <div className="recipe-detail__grid">
           <img
-            src={imageUrl}
+            src={recipe.image_upload}
             className="recipe-detail__image"
             alt={recipe.title}
           />
