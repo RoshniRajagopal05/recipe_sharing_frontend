@@ -1,0 +1,85 @@
+:root {
+  --sidebar-bg: rgba(18, 20, 28, 0.95);
+  --sidebar-border: rgba(255, 255, 255, 0.08);
+  --sidebar-shadow: rgba(0, 0, 0, 0.35);
+}
+
+.profile-sidebar {
+  width: 260px;
+  max-width: 100%;
+  background: var(--sidebar-bg);
+  border: 1px solid var(--sidebar-border);
+  border-radius: 18px;
+  box-shadow: 0 20px 50px -26px var(--sidebar-shadow);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  position: sticky;
+  top: 1.5rem;
+  align-self: flex-start;
+}
+
+.profile-sidebar__header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.profile-sidebar__name {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.profile-sidebar__email {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.7);
+  word-break: break-all;
+}
+
+.profile-sidebar__nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.profile-sidebar__link {
+  display: block;
+  padding: 0.65rem 0.9rem;
+  border-radius: 12px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.04);
+  text-decoration: none;
+  transition: background 0.2s ease;
+}
+
+.profile-sidebar__link:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.profile-sidebar__logout {
+  margin-top: auto;
+  padding: 0.65rem 0.9rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+
+.profile-sidebar__logout:hover {
+  background: rgba(255, 255, 255, 0.08);
+  transform: translateY(-1px);
+}
+
+@media (max-width: 992px) {
+  .profile-sidebar {
+    position: relative;
+    top: 0;
+    width: 100%;
+  }
+}
