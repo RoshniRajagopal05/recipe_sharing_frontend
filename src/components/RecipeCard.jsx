@@ -3,9 +3,7 @@ import { deleteRecipe } from "../services/api";
 
 function RecipeCard({ recipe, onDelete, showEditDelete = false }) {
   const summary = recipe.ingredients || recipe.Steps || "No description available.";
-  const imageUrl = recipe.image_upload
-    ? `http://127.0.0.1:8000/${recipe.image_upload.toString().replace(/^\//, "")}`
-    : "https://via.placeholder.com/400x250?text=No+Image";
+  const imageUrl = recipe.image_upload;
 
   const currentUser = localStorage.getItem("userEmail") || "";
   const isOwner =
